@@ -9,12 +9,11 @@ import morgan from 'morgan';
 import { dbConnection } from './db.js';
 import { corsOption } from './cors-configuration.js';
 import { helmetConfiguration } from './helmet-configuration.js';
+import usersRoutes from '../scr/users/users.routes.js';
 
 const BASE_URL = '/gestor-opiniones/v1';
 
-//Rutas
-import { dbConnection } from './db.js';
-
+// Middlewares
 const middlewares = (app) => {
     // Implementacion de seguridad.
     app.use(helmet(helmetConfiguration));
@@ -30,9 +29,7 @@ const middlewares = (app) => {
 
 // Integracion de todas las rutas
 const routes = (app) => {
-
-
-    app.use(`${BASE_URL}/`,);
+    app.use(`${BASE_URL}/users`, usersRoutes);
 };
 
 // Funcion para iniciar el servidor
