@@ -1,0 +1,25 @@
+// importaciones
+import dotenv from 'dotenv';
+import { initServer } from './configs/app.js';
+
+// Congiuracion de variables de entorno
+dotenv.config();
+
+// Iniciar el servidor
+// initServer();
+
+// Errores no capturados
+process.on('uncaughtException', (err) => {
+    console.log(error);
+    process.exit(1);
+});
+
+// Promesas rechazadas o no manejadas
+process.on('unhandledRejection', (reason, promise) => {
+    console.log(reason, promise);
+    process.exit(1);
+});
+
+// Inicializacion del servidor
+console.log('Iniciando servidor de KinalSport...');
+initServer();
