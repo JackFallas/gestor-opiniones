@@ -1,1 +1,10 @@
 # Gestor de opiniones
+
+## .env
+
+```env
+PORT=3001
+NODE_ENV=development
+URL_MONGODB=mongodb://localhost:27017/gestor-opiniones
+
+```

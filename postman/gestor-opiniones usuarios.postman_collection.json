@@ -1,0 +1,80 @@
+{
+  "info": {
+    "_postman_id": "2be5a9e1-f8eb-4de3-b506-951e59dafacd",
+    "name": "gestor-opiniones usuarios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52102230",
+    "_collection_link": "https://go.postman.co/collection/52102230-2be5a9e1-f8eb-4de3-b506-951e59dafacd?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "ObtenerUsuarios",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "RegistrarUsuario",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user_name\": \"jdoe_99\",\r\n  \"name\": \"John\",\r\n  \"last_name\": \"Doe\",\r\n  \"phone\": \"12345678\",\r\n  \"password\": \"miPasswordSeguro123\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"date_of_birth\": \"1999-05-15\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/gestor-opiniones/v1/users/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "gestor-opiniones",
+            "v1",
+            "users",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LoginUsuario",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "EliminarUsuario",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/gestor-opiniones/v1/users/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "gestor-opiniones",
+            "v1",
+            "users",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
