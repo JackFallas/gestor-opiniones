@@ -1,65 +1,56 @@
-'use strict';
+`use strict`;
 
 import mongoose from 'mongoose';
 
 export const dbConnection = async () => {
     try {
-        //------------------------------
-        //          Monitoreo
-        //------------------------------
-
+        // Monitoreo
         mongoose.connection.on('error', () => {
-            console.log('MongoDB | no se puede conectar a mongoBD');
+            console.log('MongoDB | no se puedo conectar a MongoDB');
             mongoose.disconnect();
         });
-
         mongoose.connection.on('connecting', () => {
-            console.log('MongoDB | intentando conectar a mongoBD');
+            console.log('MongoDB | Conectando a MongoDB');
         });
-
         mongoose.connection.on('connected', () => {
-            console.log('MongoDB | conectado a mongoBD');
+            console.log('MongoDB | Conectado a MongoDB');
         });
-
         mongoose.connection.on('open', () => {
-            console.log('MongoDB | conexion a la base de datos Bite&Go');
+            console.log('MongoDB | Conectado a MongoDB');
         });
-
         mongoose.connection.on('reconnected', () => {
-            console.log('MongoDB | reconectado a mongoBD');
+            console.log('MongoDB | Reconectado a MongoDB');
         });
-
         mongoose.connection.on('disconnected', () => {
-            console.log('MongoDB | desconectado de mongoBD');
+            console.log('MongoDB | Desconectado de MongoDB');
         });
 
+        // Conexion
         await mongoose.connect(process.env.URL_MONGODB, {
             serverSelectionTimeoutMS: 5000,
             maxPoolSize: 10,
         });
 
     } catch (error) {
-        console.log(`Error al conectar la db: ${error}`);
+        console.log(`MongoDB | Error de conexion: ${error}`);
         process.exit(1);
     }
-};
+}
 
-//-------------------------------
-//      Cierre Controlado
-//-------------------------------
+//Cierre controlado
 const gracefulShutdown = async (signal) => {
-    console.log(`MongoDB | Received ${signal}. Closing database connection...`);
+    console.log(`MongoDB | Received ${signal}. Closing MongoDB connection...`);
     try {
         await mongoose.connection.close();
-        console.log('MongoDB | Database connection closed successfully.');
-        process.exit(0); //salida exitosa
+        console.log('MongoDB | Database connection closed successfully');
+        process.exit(0); // Salida exitosa (sin errores)
     } catch (error) {
-        console.error('MongoDB | Error during graceful shutdown:', error.message);
-        process.exit(1); //salida con error
+        console.error('MongoDB | Error closing database connection:', error.message);
+        process.exit(1); // Salida con error
     }
-};
+}
 
-//Manejadores de señales para cierre controlado
+//Manejadores de señales de proceso (Proccess Signal Handlers)
 process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
-process.on('SIGQUIT', () => gracefulShutdown('SIGQUIT'));
+process.on('SIGUSR2', () => gracefulShutdown('SIGUSR2'));// For nodemon restarts

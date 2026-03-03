@@ -1,44 +1,37 @@
 `use strict`;
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
-// Importaciones
+//Importaciones 
 import express from 'express';
 import cors from 'cors';
-import helmet from 'helmet';
 import morgan from 'morgan';
+import { corsOptions } from './cors-configuration.js';
 import { dbConnection } from './db.js';
-import { corsOption } from './cors-configuration.js';
-import { helmetConfiguration } from './helmet-configuration.js';
-import usersRoutes from '../scr/users/users.routes.js';
 
-const BASE_URL = '/gestor-opiniones/v1';
 
-// Middlewares
+import userRoutes from '../src/user/user.routes.js'
+import publicationRoutes from '../src/publication/publication.routres.js'
+import commentRoutes from '../src/comments/comments.routes.js'
+import registerRoutes from '../src/register/register.routes.js'
+
+const BASE_URL = '/gestorDeOpiniones/v1';
+
 const middlewares = (app) => {
-    // Implementacion de seguridad.
-    app.use(helmet(helmetConfiguration));
-    // Configuracion de CORS. 
-    app.use(cors(corsOption));
-    // Permite el uso de formulario y su limite de tamaño es de 10mb
     app.use(express.urlencoded({ extended: false, limit: '10mb' }));
-    // Permite el uso de JSON y su limite de tamaño es de 10mb
     app.use(express.json({ limit: '10mb' }));
-    // Permite el uso de morgan en modo desarrollo
+    app.use(cors(corsOptions));
     app.use(morgan('dev'));
 };
 
-// Integracion de todas las rutas
 const routes = (app) => {
-    app.use(`${BASE_URL}/users`, usersRoutes);
-};
+    app.use(`${BASE_URL}/users`, userRoutes);
+    app.use(`${BASE_URL}/publications`, publicationRoutes);
+    app.use(`${BASE_URL}/comments`, commentRoutes);
+    app.use(`${BASE_URL}/login`, registerRoutes);
+}
 
-// Funcion para iniciar el servidor
 const initServer = async (app) => {
-    // Creacion de la instancia de la aplicacion
     app = express();
     const PORT = process.env.PORT || 3001;
     try {
-        // Configuracion de los middlewares (Mi aplicacion)
         dbConnection();
         middlewares(app);
         routes(app);
@@ -51,7 +44,7 @@ const initServer = async (app) => {
         app.get(`${BASE_URL}/HEAD`, (req, res) => {
             res.status(200).json({
                 status: 'success',
-                service: 'Gestor de opiniones',
+                service: 'Gestor de Opiniones',
                 version: '1.0.0'
             }
             );

@@ -1,0 +1,394 @@
+{
+  "info": {
+    "_postman_id": "7d42623f-66b5-421d-897b-a0d88d2c5634",
+    "name": "Gestor de Opiniones",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52082090",
+    "_collection_link": "https://go.postman.co/collection/52082090-7d42623f-66b5-421d-897b-a0d88d2c5634?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Juan\",\r\n  \"surname\": \"Pérez\",\r\n  \"username\": \"juanito99\",\r\n  \"email\": \"juan.perez@example.com\",\r\n  \"password\": \"PasswordSegura123!\",\r\n  \"dateOfBirth\": \"1995-05-15\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"surname\": \"Pérez-Gómez\",\r\n  \"username\": \"juan_pro_2024\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/users/699357a261a7814065498638",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "users",
+                "699357a261a7814065498638"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"surname\": \"Pérez-Gómez\",\r\n  \"username\": \"juan_pro_2024\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/users/69934f061e92f080c8768b7b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "users",
+                "69934f061e92f080c8768b7b"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "publication",
+      "item": [
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"surname\": \"Pérez-Gómez\",\r\n  \"username\": \"juan_pro_2024\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/publications",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "publications"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Mi primera publicación en Node.js\",\r\n  \"content\": \"Este es el contenido de mi post. Aprendiendo a usar Mongoose y referencias entre modelos.\",\r\n  \"user\": \"699357a261a7814065498638\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/publications",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "publications"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Mi primera publicación en Node.js\",\r\n  \"content\": \"Este es el de mi post. Aprendiendo a usar Mongoose y referencias entre modelos.\",\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/publications/6993587761a7814065498644",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "publications",
+                "6993587761a7814065498644"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Mi primera publicación en Node.js\",\r\n  \"content\": \"Este es el de mi post. Aprendiendo a usar Mongoose y referencias entre modelos.\",\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/publications/6993587761a7814065498644",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "publications",
+                "6993587761a7814065498644"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "comments",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"content\": \"¡Excelente post! Me ayudó mucho con mi proyecto de Node.\",\r\n  \"user\": \"699357a261a7814065498638\", \r\n  \"publication\": \"699351f746764c52348e6895\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/comments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "comments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"content\": \"¡Excelente post! Me ayudó mucho con mi proyecto de Node.\",\r\n  \"user\": \"699357a261a7814065498638\", \r\n  \"publication\": \"699351f746764c52348e6895\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/comments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "comments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"content\": \"¡Excelente post! Me ayudó con mi proyecto de Node.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/comments/69935a4e486ec3949d44333b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "comments",
+                "69935a4e486ec3949d44333b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"content\": \"¡Excelente post! Me ayudó con mi proyecto de Node.\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/comments/69935a4e486ec3949d44333b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "comments",
+                "69935a4e486ec3949d44333b"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "register",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"juan_pro_2024\",\r\n  \"email\": \"juan.perez@example.com\",\r\n  \"password\": \"PasswordSegura123!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/gestorDeOpiniones/v1/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "gestorDeOpiniones",
+                "v1",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
