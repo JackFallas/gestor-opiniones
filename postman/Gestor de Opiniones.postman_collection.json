@@ -1,10 +1,10 @@
 {
   "info": {
-    "_postman_id": "7d42623f-66b5-421d-897b-a0d88d2c5634",
+    "_postman_id": "1669c646-85cd-4265-8d7d-62e106ddf2f5",
     "name": "Gestor de Opiniones",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "52082090",
-    "_collection_link": "https://go.postman.co/collection/52082090-7d42623f-66b5-421d-897b-a0d88d2c5634?source=collection_link"
+    "_exporter_id": "52272225",
+    "_collection_link": "https://go.postman.co/collection/52272225-1669c646-85cd-4265-8d7d-62e106ddf2f5?source=collection_link"
   },
   "item": [
     {
@@ -38,7 +38,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\": \"Juan\",\r\n  \"surname\": \"Pérez\",\r\n  \"username\": \"juanito99\",\r\n  \"email\": \"juan.perez@example.com\",\r\n  \"password\": \"PasswordSegura123!\",\r\n  \"dateOfBirth\": \"1995-05-15\"\r\n}",
+              "raw": "{\r\n  \"name\": \"Jack\",\r\n  \"surname\": \"Fallas\",\r\n  \"username\": \"jcraxker\",\r\n  \"email\": \"ejemplo@gmail.com\",\r\n  \"password\": \"Password123!\",\r\n  \"dateOfBirth\": \"2007-09-16\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -68,7 +68,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"surname\": \"Pérez-Gómez\",\r\n  \"username\": \"juan_pro_2024\"\r\n}",
+              "raw": "{\r\n  \"surname\": \"Fallas-Gómez\",\r\n  \"username\": \"J.Craxker\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -99,7 +99,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"surname\": \"Pérez-Gómez\",\r\n  \"username\": \"juan_pro_2024\"\r\n}"
+              "raw": "{\r\n  \"surname\": \"Fallas-Gómez\",\r\n  \"username\": \"J.Craxker\"\r\n}"
             },
             "url": {
               "raw": "http://localhost:3001/gestorDeOpiniones/v1/users/69934f061e92f080c8768b7b",
@@ -133,7 +133,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"surname\": \"Pérez-Gómez\",\r\n  \"username\": \"juan_pro_2024\"\r\n}"
+              "raw": "{\r\n  \"surname\": \"Fallas-Gómez\",\r\n  \"username\": \"J.Craxker\"\r\n}"
             },
             "url": {
               "raw": "http://localhost:3001/gestorDeOpiniones/v1/publications",
@@ -158,7 +158,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"title\": \"Mi primera publicación en Node.js\",\r\n  \"content\": \"Este es el contenido de mi post. Aprendiendo a usar Mongoose y referencias entre modelos.\",\r\n  \"user\": \"699357a261a7814065498638\" \r\n}",
+              "raw": "{\r\n  \"title\": \"Tralalero tralala\",\r\n  \"content\": \"Aserejadejedejetubere.\",\r\n  \"user\": \"699357a261a7814065498638\" \r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -188,7 +188,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"title\": \"Mi primera publicación en Node.js\",\r\n  \"content\": \"Este es el de mi post. Aprendiendo a usar Mongoose y referencias entre modelos.\",\r\n}"
+              "raw": "{\r\n  \"title\": \"Se murio tralalero tralala\",\r\n  \"content\": \"nimodo.\",\r\n}"
             },
             "url": {
               "raw": "http://localhost:3001/gestorDeOpiniones/v1/publications/6993587761a7814065498644",
@@ -214,7 +214,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"title\": \"Mi primera publicación en Node.js\",\r\n  \"content\": \"Este es el de mi post. Aprendiendo a usar Mongoose y referencias entre modelos.\",\r\n}"
+              "raw": "{\r\n  \"title\": \"Se murio tralalero tralala\",\r\n  \"content\": \"nimodo.\",\r\n}"
             },
             "url": {
               "raw": "http://localhost:3001/gestorDeOpiniones/v1/publications/6993587761a7814065498644",
@@ -245,7 +245,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"content\": \"¡Excelente post! Me ayudó mucho con mi proyecto de Node.\",\r\n  \"user\": \"699357a261a7814065498638\", \r\n  \"publication\": \"699351f746764c52348e6895\"\r\n}",
+              "raw": "{\r\n  \"content\": \"tralalero\",\r\n  \"user\": \"699357a261a7814065498638\", \r\n  \"publication\": \"699351f746764c52348e6895\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -278,7 +278,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"content\": \"¡Excelente post! Me ayudó mucho con mi proyecto de Node.\",\r\n  \"user\": \"699357a261a7814065498638\", \r\n  \"publication\": \"699351f746764c52348e6895\"\r\n}"
+              "raw": "{\r\n  \"content\": \"tralalero\",\r\n  \"user\": \"699357a261a7814065498638\", \r\n  \"publication\": \"699351f746764c52348e6895\"\r\n}"
             },
             "url": {
               "raw": "http://localhost:3001/gestorDeOpiniones/v1/comments",
@@ -303,7 +303,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"content\": \"¡Excelente post! Me ayudó con mi proyecto de Node.\"\r\n}",
+              "raw": "{\r\n  \"content\": \"NOOOOO TRALALERO\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -334,7 +334,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"content\": \"¡Excelente post! Me ayudó con mi proyecto de Node.\"\r\n}"
+              "raw": "{\r\n  \"content\": \"NOOOOO TRALALERO\"\r\n}"
             },
             "url": {
               "raw": "http://localhost:3001/gestorDeOpiniones/v1/comments/69935a4e486ec3949d44333b",
@@ -365,7 +365,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"username\": \"juan_pro_2024\",\r\n  \"email\": \"juan.perez@example.com\",\r\n  \"password\": \"PasswordSegura123!\"\r\n}",
+              "raw": "{\r\n  \"username\": \"jcraxker\",\r\n  \"email\": \"ejemplo@gmail.com\",\r\n  \"password\": \"Password123!\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
