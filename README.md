@@ -46,7 +46,7 @@ GestorDeOpiniones/
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/EduardoLG/GestorDeOpiniones.git
+   git clone https://github.com/JackFallas/gestor-opiniones.git
    cd GestorDeOpiniones
    ```
 
