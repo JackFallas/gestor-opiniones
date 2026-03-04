@@ -121,15 +121,6 @@ npm list
 - Separación de concerns
 - Fácil mantenimiento y escalabilidad
 
-## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## 📧 Contacto
-
-- **Autor**: EduardoLG
-- **GitHub**: [@EduardoLG](https://github.com/EduardoLG)
-
 ## 🎓 Recursos Útiles
 
 - [Documentación de Node.js](https://nodejs.org/docs/)
